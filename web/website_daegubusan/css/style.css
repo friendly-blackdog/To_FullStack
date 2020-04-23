@@ -1,37 +1,52 @@
-body {
-    padding: 50px;
+@charset "utf-8";
+/*CSS Document*/
+
+#banner {
+    height: 160px; 
+    background: #0e3c84;
 }
 
-table.type1 thead th {
-    height: 38px;
-    background: url(image/bg_line.gif) no-repeat left bottom;
-    border-top: 1px solid #29ad0d;
-    border-bottom: 2px solid #29ad0d;
-    font-size: 12px;
-    color: #626262;
-}
-
-table.type1 thead th:first-child{
-    background:none;
-}
-
-table.type1 tbody td{
-    padding: 12px;
-    border-bottom: 1px solid;
-    font-size: 11px;
-    color: #888;
+#banner > div {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto; 
     text-align: center;
 }
 
-table.type1 tbody td.subject{
-    text-align: left;
+#banner .prev,
+#banner .next,
+#banner .control,
+#banner .close {
+    position: absolute;
 }
 
-table.type1 tbody td.subject a{
-    font-size: 12px;
-    color: #666;
+#banner .prev {
+    left: 0;
+    top: 42px;
 }
 
-table.type1 tbody td.subject a:hover {
-    text-decoration: underline;
+#banner .next {
+    right: 0;
+    top: 42px;
+}
+
+#banner .control {
+    left: 0;
+    bottom: 11px;
+    font-size: 0;
+}
+
+#banner .control a{
+    margin: 0 15px 0 0;
+}
+
+#banner .close {
+    right: 0;
+    bottom: 4px;
+}
+
+#banner .close label {
+    padding: 0 22px 0 0;
+    font-size: 11px;
+    color: #fff;
 }
