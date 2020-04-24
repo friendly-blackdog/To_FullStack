@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소에 대해서</title>
+</head>
+<body>
+    hello world
+    <div class="test">텍스트</div>
+
+<!-- 
+    제목(콘텐츠 블록)
+    Inline 요소와 텍스트만 포함할 수 있음
+    계층구조를 준수해야 함
+    <h1>요소는 한 페이지에 한번만 제공함
+    굵은 글씨
+ -->
+
+    <h1>하나하면 하나지</h1>
+    <h2>둘이겠느냐</h2>
+    <h3>석 삼</h3>
+    <h4>김밥 네 줄</h4>
+    <h5>오오오오오오오오</h5>
+    <h6>6개월이면 습관 생성</h6>
+
+<!-- <img> -->
+<!-- 
+    <img src-"url" alt="대체텍스트">
+    <img src="url" alt="회사소개" longdesc="name.html">
+ -->
+ <!-- 
+     내용이 없는 경우는 빈 대체 텍스트 제공
+     <img src="icon.gif" alt="">
+     내용이 길거나 복잡한 경우 longdesc, 대체콘텐츠 등으로 추가정보 제공
+     longdescription 확인방법
+     - Firefox > 마우스 우측버튼 > 설명보기
+  -->
+
+
+
+
+
+<!-- <a> Hyper Link -->
+<!-- <a href="url">텍스트</a> -->
+<!-- 
+    <a> = Anchor (닻)
+    href = Hyptertext Reference
+    페이지와 페이지를 연결함
+    target속성으로 페이지 열리는 방식 제공
+        - <a href="url" target="_blank">텍스트</a>
+    다른 도메인 연결시 http://까지 제공해야함.
+    파란색 텍스트에 밑줄로 기본제공됨.
+ -->
+
+<a href="http://naver.com" target="_blank">네이버 바로가기</a>
+
+a링크는 inline 요소이기 때문에 이렇게 여러번 넣으면 옆으로 쌓이게 된다.
+<a href="http://naver.com" target="_blank">네이버 바로가기</a>
+<a href="http://naver.com" target="_blank">네이버 바로가기</a>
+
+<a href="">링크 값에 내용이 없을경우</a><br>
+<a href="#">#만 제공하는 경우</a><br>
+<!-- 위로 이동 -->
+<a href="#content">내부링크를 제공하는 경우</a><br>
+<!-- id가 content를 찾아서 이동 
+     페이지 내에서 이동
+-->
+<a href="#a">없는 아이디를 넣는경우</a><br>
+<!-- 
+    a id를 찾게 되는건데, 전혀 반응이 없다.
+ -->
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="content">내부링크가 작동하여 스크롤을 이동시켰습니다.</div>
+
+</body>
+</html>
