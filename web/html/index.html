@@ -108,5 +108,204 @@ a링크는 inline 요소이기 때문에 이렇게 여러번 넣으면 옆으로
  미애가 말했다. &quot;싱싱한 회&quot; <br>
 
  서리태 &nbsp;&nbsp;&nbsp;&nbsp;콩가루
+
+
+
+ <!-- Table: Data Table -->
+ <!-- 
+     <caption>
+        <table>
+        <caption>표의 제목</caption>
+        <colgroup>
+        <col widt="25%">
+표의 제목
+표의 위에 위치하며 텍스트 가운데 정렬
+
+    <summary>
+        <table summary="요약">
+        <caption>표의 제목</caption>
+        <colgroup>
+        <col width="25%">
+표의 요약글
+시각장애인 전용 속성
+브라우저에 시각적으로 표현되지 않음
+ -->
+
+
+<!-- <colgrup>, <col> -->
+<!-- 
+    <caption> 표의 제목 </caption>
+    <colgroup>
+    <col width="10px">
+    <col style="width:10px;">
+    <col width="10%">
+    <col style="width:10%">
+    <col width="*">
+    <col width="">
+    </colgroup>
+    <thead>
+
+열의 그룹
+<caption> 요소 다음 위치함
+첫 번째 <col> 요소는 표의 좌측 첫 번째 셀부터 적용됨
+가로 사이즈(width)만 지정 가능
+-->
+
+
+
+<!-- <thead><tfoot><tbody> -->
+<!-- 
+    ...중략...
+    <thead>
+    <tr>
+        <th>성별</th>
+    <tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <td><여성/td>
+    <tr>
+    </tfoot>
+    <tbody>
+    <tr>
+        <td>남성</td>
+    <tr>
+    <t/body>
+    ...중략
+
+행의 그룹
+thead -> tfoot -> tbody 순으로 제공
+모든 행의 그룹을 제공하지 않아도 된다
+    - 콘텐츠의 구성에 따라 유동적으로 달라진다
+<thead>에는 제목셀인 <th>만 제공할 수 있다
+<tfoot>, <tbody>에는 제목셀<th>, 내용셀<td>을 복합적으로 제공할 수 있다
+ -->
+
+
+
+ <!-- <tr> <th> <td> -->
+<!-- 
+    ...중략...
+    <tbody>
+    <tr>
+        <th>제목셀</th>
+        <td>내용셀</td>
+        <td>내용셀</td>
+    </tr>
+    </tbody>
+    ...중략
+
+<tr>: table row = 행
+<th>: table header cell = 제목 샐
+    - 가운데 정렬
+    - 굵은 글씨
+    - 세로 가운데 정렬
+<td>: table data cell = 데이터 셀
+    - 좌측정렬
+    - 세로 가운데 정렬
+    - 기본 글씨
+
+ -->
+
+
+
+ <!-- rowspan -->
+ <!-- 
+     ...중략...
+     <tr>
+         <th rowspan="2">제목셀</th>
+         <td>내용셀</td>
+         <td>내용셀</td>
+     </tr>
+     <tr>
+         <td>내용셀</td>
+         <td>내용셀</td>
+     </tr>
+     ...중략
+
+<th>, <td>행의 병합
+병합하려는 첫 번째 행의 셀에 제공
+  -->
+
+
+
+  <!-- colspan -->
+  <!-- 
+      ...중략...
+      <tr>
+          <td>내용셀</td>
+          <td colspan="2">열의합침</td>
+      </tr>
+      <tr>
+          <td>내용셀</td>
+          <td>내용셀</td>
+          <td>내용셀</td>
+      </tr>
+      ...중략...
+    
+<th>, <td>열의 병합
+    병합하려는 첫 번째 열의 셀에 제공
+   -->
+    
+
+
+<table width="100%" border="1" summary="교육일자 7월1일, 20일 이틀동안 수강생 총 30명이 서울, 수원에서 만족도 상을 나타내었다.">
+    <caption>웹 표준 교육과정</caption>
+    <colgroup>
+        <col width="25%">
+        <col width="25%">
+        <col width="25%">
+        <col width="25%">
+    </colgroup>
+    <thead>
+    <tr>
+       <th>교육일자</th>
+       <th>수강생</th>
+       <th>지역</th>
+       <th>만족도</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <th>합계</th>
+        <td>30명</td>
+        <td>-</td>
+        <td>상</td>
+    </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <th>2015년 7월 1일</th>
+            <td>20명</td>
+            <td>서울</td>
+            <td>상</td>
+        </tr>
+        <tr>
+            <th>2015년 7월 20일</th>
+            <td>10명</td>
+            <td>수원</td>
+            <td>상</td>
+        </tr>
+    </tbody>
+</table>
+<br><br><br><br><br><br><br><br><br>
+
+<table border="1" width="100%">
+<tr>
+    <td colspan="2">1</td>
+    <td rowspan="2">3</td>
+    <td>4</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>6</td>
+    <td>8</td>
+</tr>
+<tr>
+    <td>9</td>
+    <td colspan="3">10</td>
+</tr>
+</table>
+
 </body>
 </html>
