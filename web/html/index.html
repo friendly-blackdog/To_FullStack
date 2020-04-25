@@ -390,5 +390,104 @@ thead -> tfoot -> tbody 순으로 제공
     <dd>[명사]Web </dd>
 </dl>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<!-- Form: Online Form -->
+<!-- <form>
+    <form action="" method="">
+        내용
+    </form>
+사용자 입력을 위한 폼을 만드는데 사용
+Action = 양식이 제출 될 때 폼 데이터를 전송하는 위치지정
+Method = post, get
+- 폼 데이터를 전송할 때 사용하는 방법을 지정
+- get: url에 데이터가 출력되면서 전송되는 형태
+- post: http request 본문 내에서 전달되는 방식
+ -->
+
+ <!-- 
+     <fieldset>, <legend>
+
+    <form action="" method="">
+        <fieldset>
+            <legend></legend>
+            내용
+        </fieldset>
+    </form>
+
+<fieldset>
+    - 폼의 그룹
+    - 요소 주위에 상자를 그림
+<legend>
+    - <fieldset>의 제목을 정의
+  -->
+
+
+
+
+  <!-- <nput type="?" -->
+<!-- 
+    text: 한 줄 글상자
+    Ex)이름, 아이디, 전화번호 등
+
+    password: 비밀번호 입력상자
+    Ex) 비밀번호, 주민등록번호 뒷자리 등
+
+    radio: 단일 선택상자
+    Ex) 성별선택, 동의함.동의안함
+
+    checkbox: 다중 선택 상자
+    Ex) 아이디저장, 취미, 특기 선택
+
+    file: 첨부파일형태로 서버에 전송
+    Ex) 첨부파일 업로드
+
+    image: 이미지버튼 alt 속성으로 대체 텍스트 제공
+    Ex) 일반버튼
+ -->
+
+
+
+
+  <form action="" method="">
+      <fieldset>
+          <legend>로그인</legend>
+
+          <ul>
+              <li>
+                  <input type="text" readonly disabled maxlength="8" value="아이디를 입력하세요.">8자 이하로 입력하세요.
+              </li>
+              <li>
+                  <input type="password">
+              </li>
+              <li>
+                  <input type="radio" name="sex">여성
+                  <input type="radio" name="sex">남성
+              </li>
+              <li>
+                  <input type="checkbox">회
+                  <input type="checkbox">샐러드
+                  <input type="checkbox">매실청
+                  <input type="checkbox">떡
+              </li>
+              <li>
+                  <input type="file">
+              </li>
+              <li>
+                  <input type="image" src="star.png" alt="별">
+              </li>
+              <li>
+
+              </li>
+              <li>
+
+              </li>
+              <li>
+
+              </li>
+          </ul>
+      </fieldset>
+  </form>
 </body>
 </html>
