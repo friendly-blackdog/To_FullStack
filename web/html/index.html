@@ -445,8 +445,51 @@ Method = post, get
 
     image: 이미지버튼 alt 속성으로 대체 텍스트 제공
     Ex) 일반버튼
+
+    submit: 전송버튼
+    Ex) 일반버튼
+
+    reset: 취소버튼
+    Ex) 일반버튼
+
+    button: 범용버튼
+    Ex) 일반버튼
+
+    hidden: 사용자에게 보이지 않는 입력폼
+    Ex)데이터 전송 목적
+
+    button: 범용버튼
+    <button>내용</button>
+
+    textarea: 여러줄 글상자
+    <textarea>내용</textarea>
+
+    속성: cols, rows
+    Ex) 게시판 글쓰기
+
+    select: 목록상자
+    <select>
+    <optgroup label="제목">
+        <option>내용</option>
+    </optgroup>
+    </select>
+
+    optgroup
+    -    목록 그룹화
+    -    label 속성으로 목록 제목 제공
+    -    필수제공항목 아님
  -->
 
+ <!-- <label> -->
+<!-- <label for="value">선택</label> -->
+<!-- 
+    온라인 서식을 제공할 경우, label 또는 title을 제공 해야함
+    폼요소와 해당 요소를 설명하는 텍스트와의 연결
+    명시적 레이블/암묵적 레이블
+    사용성 향상을 위해 사용
+
+    * 이건 label 요소. 위에건 label 속성. 전혀 다른 목적을 가지고 있다. 주의!
+ -->
 
 
 
@@ -478,16 +521,101 @@ Method = post, get
                   <input type="image" src="star.png" alt="별">
               </li>
               <li>
-
+                  <input type="submit" value="이메일 전송">
               </li>
               <li>
-
+                  <input type="reset" value="취소">
               </li>
               <li>
-
+                  <input type="button" value="일반버튼">
               </li>
+              <li>
+                  <button>버튼</button>
+              </li>
+              <li>
+                  <input type="hidden">
+              </li>
+              <li>
+                  <textarea rows="" cols="">다중편집장</textarea>
+              </li>
+              <li>
+                  <select>
+                      <option>서울</option>
+                      <option>강원도</option>
+                      <option>경기도</option>
+                  </select>
+                  <select multiple>
+                    <option>서울</option>
+                    <option>강원도</option>
+                    <option>경기도</option>
+                </select>
+              </li>
+              <li>
+                <select>
+                    <optgroup label="서울">
+                        <option>잠실</option>
+                        <option>종로</option>
+                        <option>강남</option>
+                    </optgroup>
+                    <optgroup label="청주">
+                    <option>흥덕</option>
+                    <option>가경</option>
+                    <option>내덕</option>
+                </optgroup>
+                </select>
+              </li>
+              <li>
+                  <input type="radio" name="sex" id="ra1"><label for="ra1">여</label>
+                  <input type="radio" name="sex" id="ra2"><label for="ra2">남</label>
+              </li>
+              <li>
+                  <label for="phone">핸드폰 번호</label>
+                  <select id="phone">
+                      <option>010</option>
+                      <option>016</option>
+                      <option>017</option>
+                      <option>018</option>
+                  </select>
+                  -
+                  <input type="text" title="핸드폰 번호 두번째 자리 입력">
+                  -
+                  <input type="text" title="핸드폰 번호 세 번째 자리 입력">
+              </li>
+              <li></li>
+              <li></li>
           </ul>
       </fieldset>
   </form>
+
+  <!-- 지금까지 본 것이 명시적 레이블 -->
+
+  <!-- 명시적 레이블 -->
+  <!-- 
+      <input type="checkbox" id="a1"><label for="a1">선택1</label>
+      <input type="checkbox" id="a2"><label for="a2">선택2</label>
+      <input type="checkbox" id="a3"><label for="a3">선택3</label>
+
+      선택 또는 입력해야 하는 폼요소에 id를 부여한 후 연결되는 텍스트에 label을 젱공하여 for와 id에 동일한 값을 제공한다. 단, id, for값은 한페이지에 한번만 제공할 수 있다.
+
+      id와 for가 따로 따로 연결된 것을 말한다.
+   -->
+   <!-- 암묵적 레이블 -->
+   <!-- 
+       <label><input type="checkbox">선택1</label>
+       <label><input type="checkbox">선택2</label>
+       <label><input type="checkbox">선택3</label>
+
+       선택 또는 입력해야 하는 폼요소와 텍스트를 label에 포함시켜 제공한다.
+
+       암묵적 레이블 같은 경우에는 for와 id도 존재하지 않는다. 이건 절대 사용하면 안된다. 일반적인 웹 표준 문법상에서는 문제가 되지 않지만, 나중에 접근성으로 넘어가게 되면 sense라는 화면을 읽어주는 프로그램을 실행하게 된다면, 시각장애인들이 제대로 된 정보를 받지 못하기 때문이다.
+    -->
+    <!-- 혼합형 레이블 -->
+    <!-- 
+        <label for="infoNum">주민등록번호</label>
+        <input type="text" id="infoNum" title="주민등록번호 앞자리">
+        <input type="text" title="주민등록번호 뒷자리">
+
+        id와 label의 1:1 매칭이 어려울 경우 title속성으로 대신 제공해도 된다.
+     -->
 </body>
 </html>
