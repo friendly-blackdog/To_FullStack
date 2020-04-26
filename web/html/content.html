@@ -7,6 +7,9 @@
 </head>
 <body>
 
+
+    <!-- table -->
+
 <style>
     table { width: 100%;}
     th, td { border: 1px solid red;}
@@ -25,28 +28,40 @@
             <th>3</th>
         </tr>
     </thead>
-
-
-<a href="#a">
-    <figure>
-        <img src="images/pic.png" alt="">
-        <figcaption>샤이니 이태민 왼쪽 팔 캡쳐 <span>작성일</span> 2020-04-26</figcaption>
-    </figure>
-</a>
-
-<ul>
-    <li>
-        <a href="#a">
-            <figure>
-                <img src="images/lighter.png" alt="">
-                <figcaption>지포 My Name is</figcaption>
-                <span>상품코드</span> 24890
-                <em>구매하기</em>
-            </figure>
-        </a>
-    </li>
-</ul>
-
 </table>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+    <!-- fig, figcaption -->
+
+    <a href="#a">
+        <figure>
+            <img src="images/pic.png" alt="">
+            <figcaption>샤이니 이태민 왼쪽 팔 캡쳐 <span>작성일</span> 2020-04-26</figcaption>
+        </figure>
+    </a>
+    
+    <ul>
+        <li>
+            <a href="#a">
+                <figure>
+                    <img src="images/lighter.png" alt="">
+                    <figcaption>지포 My Name is</figcaption>
+                    <span>상품코드</span> 24890
+                    <em>구매하기</em>
+                </figure>
+            </a>
+        </li>
+    </ul>
+
+    <br><br><br><br><br><br><br><br><br><br> 
+
+<picture>
+    <source media="(min-width:800px)" srcset="images/pic1.png">
+    <source media="(min-width:350px)" srcset="images/pic2.png">
+        <!-- browser의 가로사이즈가 350~799px pic3-->
+    <img src="images/pic3.png" alt="test" style="width: auto">
+    <!-- browser의 가로사이즈가 0~349px pic3-->
+</picture>
 </body>
 </html>
