@@ -45,7 +45,13 @@ class MainActivity : AppCompatActivity() {
             incrementScore()
         }
 
-        resetGame()
+        if(savedInstanceState != null) {
+            score = savedInstanceState.getInt(SCORE_KEY)
+            timeLeftOnTimer = savedInstanceState.getLong(TIME_LEFT_KEY)
+            restoreGame()
+        } else {
+            resetGame()
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -61,6 +67,18 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG, "onDestroy called.")
+    }
+
+
+
+    private fun incrementScore() {
+        if(!gameStarted) {
+            startGame()
+        }
+
+        score += 1
+        val newScore = getString(R.string.yourScore, score)
+        gameScoreTextView.text = newScore
     }
 
     private fun resetGame() {
@@ -84,14 +102,26 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun incrementScore() {
-        if(!gameStarted) {
-            startGame()
+    private fun restoreGame() {
+        gameScoreTextView.text = getString(R.string.yourScore, score)
+
+        val restoredTime = timeLeftOnTimer / 1000
+        timeLeftTextView.text = getString(R.string.timeLeft, restoredTime)
+
+        countDownTimer = object : CountDownTimer(timeLeftOnTimer, countDownInterval) {
+            override fun onTick(millisUntilFinished: Long) {
+                timeLeftOnTimer = millisUntilFinished
+                val timeLeft = millisUntilFinished / 1000
+                timeLeftTextView.text = getString(R.string.timeLeft, timeLeft)
+            }
+
+            override fun onFinish() {
+                endGame()
+            }
         }
 
-        score += 1
-        val newScore = getString(R.string.yourScore, score)
-        gameScoreTextView.text = newScore
+        countDownTimer.start()
+        gameStarted = true
     }
 
     private fun startGame() {
