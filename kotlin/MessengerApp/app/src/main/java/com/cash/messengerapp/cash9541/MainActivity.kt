@@ -66,8 +66,6 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists())
                 {
-//                    val user: Users? = p0.getValue(Users::class.java)
-
                     val user: Users? = p0.getValue(Users::class.java)
 
                     user_name.text = user!!.getUserName()
