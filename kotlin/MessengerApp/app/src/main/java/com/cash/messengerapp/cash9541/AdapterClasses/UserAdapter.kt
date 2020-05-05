@@ -1,11 +1,16 @@
 package com.cash.messengerapp.cash9541.AdapterClasses
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.cash.messengerapp.cash9541.MainActivity
+import com.cash.messengerapp.cash9541.MessageChatActivity
 import com.cash.messengerapp.cash9541.ModelClasses.Users
 import com.cash.messengerapp.cash9541.R
 import com.squareup.picasso.Picasso
@@ -46,6 +51,30 @@ class UserAdapter(
         val user: Users = mUsers[i]
         holder.userNameTxt.text = user!!.getUserName()
         Picasso.get().load(user.getProfile()).placeholder(R.drawable.profile).into(holder.profileImageView)
+
+
+
+        holder.itemView.setOnClickListener {
+            val options = arrayOf<CharSequence>(
+                "Send Message",
+                "Visit Profile"
+            )
+            val builder: AlertDialog.Builder = AlertDialog.Builder(mContext)
+            builder.setTitle("What do you want?")
+            builder.setItems(options, DialogInterface.OnClickListener { dialog, position ->
+                if (position == 0)
+                {
+                    val intent = Intent(mContext, MessageChatActivity::class.java)
+                    intent.putExtra("visit_id", user.getUID())
+                    mContext.startActivity(intent)
+                }
+                if (position == 1)
+                {
+
+                }
+
+            })
+        }
     }
 
 
