@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //display username and profile picture
+        //username과 profile picture 부분
         refUsers!!.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists())
