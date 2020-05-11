@@ -26,7 +26,7 @@ class UserAdapter(
 
     private val mContext:Context
     private val mUsers: List<Users>
-    private val isChatCheck: Boolean
+    private var isChatCheck: Boolean
 
 
     init{

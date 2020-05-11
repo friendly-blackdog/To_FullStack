@@ -77,7 +77,7 @@ class SearchFragment : Fragment() {
     {
         var firebaseUserID = FirebaseAuth.getInstance().currentUser!!.uid
 
-        val refUsers = FirebaseDatabase.getInstance().reference.child("Users")
+        val refUsers = FirebaseDatabase.getInstance().reference.child("users")
 
         refUsers.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
@@ -110,7 +110,7 @@ class SearchFragment : Fragment() {
         var firebaseUserID = FirebaseAuth.getInstance().currentUser!!.uid
 
         val queryUsers = FirebaseDatabase.getInstance().reference
-            .child("Users").orderByChild("search")
+            .child("users").orderByChild("search")
             .startAt(str)
             .endAt(str + "\uf8ff")
 
