@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "925918716911",
+    "firebase_url": "https://chatapp-73227.firebaseio.com",
+    "project_id": "chatapp-73227",
+    "storage_bucket": "chatapp-73227.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925918716911:android:79beb0423bdab9843ccc1a",
+        "android_client_info": {
+          "package_name": "com.cash.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "925918716911-2savemdckt79meptvt42rkfgl05uioc1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYLR8I_NVlQVDP-giJLcgg4R_MJ0VsIhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "925918716911-2savemdckt79meptvt42rkfgl05uioc1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
