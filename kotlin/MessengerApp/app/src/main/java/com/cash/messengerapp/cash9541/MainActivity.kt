@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
 
         firebaseUser = FirebaseAuth.getInstance().currentUser
-        refUsers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUser!!.uid)
+        refUsers = FirebaseDatabase.getInstance().reference.child("users").child(firebaseUser!!.uid)
 
 
         val toolbar: Toolbar = findViewById(R.id.toolbar_main)
