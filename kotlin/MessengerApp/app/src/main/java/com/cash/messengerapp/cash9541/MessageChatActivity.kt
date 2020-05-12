@@ -41,7 +41,7 @@ class MessageChatActivity : AppCompatActivity()
 
 
         val reference = FirebaseDatabase.getInstance().reference
-            .child("Users").child(userIdVisit)
+            .child("users").child(userIdVisit)
         reference.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot)
             {
@@ -126,7 +126,7 @@ class MessageChatActivity : AppCompatActivity()
 
 
                     val reference = FirebaseDatabase.getInstance().reference
-                        .child("Users").child(firebaseUser!!.uid)
+                        .child("users").child(firebaseUser!!.uid)
 
                 }
             }
@@ -177,6 +177,9 @@ class MessageChatActivity : AppCompatActivity()
                     messageHashMap["messageId"] = messageId
 
                     ref.child("Chats").child(messageId!!).setValue(messageHashMap)
+
+
+                    progressBar.dismiss()
 
                 }
             }

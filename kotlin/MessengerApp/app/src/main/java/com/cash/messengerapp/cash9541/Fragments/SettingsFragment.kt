@@ -54,7 +54,7 @@ class SettingsFragment : Fragment()
 
 
         firebaseUser = FirebaseAuth.getInstance().currentUser
-        usersReference = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUser!!.uid)
+        usersReference = FirebaseDatabase.getInstance().reference.child("users").child(firebaseUser!!.uid)
         storageRef = FirebaseStorage.getInstance().reference.child("User Images")
 
 
