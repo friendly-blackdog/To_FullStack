@@ -48,7 +48,7 @@ class SettingsFragment : Fragment()
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment 왜 안되니
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
 
 
@@ -237,7 +237,7 @@ class SettingsFragment : Fragment()
                     if (coverChecker == "cover")
                     {
                         val mapCoverImg = HashMap<String, Any>()
-                        mapCoverImg["Cover"] = url
+                        mapCoverImg["cover"] = url
                         usersReference!!.updateChildren(mapCoverImg)
                         coverChecker = ""
 
