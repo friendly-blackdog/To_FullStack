@@ -1,4 +1,4 @@
-package com.cash.messengerapp.cash9541
+package com.cash.messengerapp.Kash9541
 
 import org.junit.Test
 
