@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //display username and profile picture
+        //display username and profile picture ㅁㄴㅇㄹㅁㄴㅇㄹ
         refUsers!!.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists())
