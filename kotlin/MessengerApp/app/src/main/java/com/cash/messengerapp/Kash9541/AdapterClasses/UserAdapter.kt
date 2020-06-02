@@ -41,25 +41,24 @@ class UserAdapter(
         val user: Users = mUsers[i]
 
         holder.userNameTxt.text = user!!.getUserName()
-        Picasso.get().load(user.getProfile()).into(holder.profileImageView)
+        Picasso.get().load(user.getProfile()).placeholder(R.drawable.profile).into(holder.profileImageView)
     }
 
-// 12.00
+// 21.33
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
         var userNameTxt: TextView
         var profileImageView: CircleImageView
         var onlineImageView: CircleImageView
         var offlineImageView: CircleImageView
-        var lastMeesageTxt: TextView
+        var lastMessageTxt: TextView
 
         init {
             userNameTxt = itemView.findViewById(R.id.username)
             profileImageView = itemView.findViewById(R.id.profile_image)
             onlineImageView = itemView.findViewById(R.id.image_online)
             offlineImageView = itemView.findViewById(R.id.image_offline)
-            lastMeesageTxt = itemView.findViewById(R.id.message_last)
-
+            lastMessageTxt = itemView.findViewById(R.id.message_last)
         }
     }
 }
