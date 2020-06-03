@@ -44,7 +44,7 @@ class UserAdapter(
         Picasso.get().load(user.getProfile()).placeholder(R.drawable.profile).into(holder.profileImageView)
     }
 
-// 21.33
+// 21.34
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
         var userNameTxt: TextView
