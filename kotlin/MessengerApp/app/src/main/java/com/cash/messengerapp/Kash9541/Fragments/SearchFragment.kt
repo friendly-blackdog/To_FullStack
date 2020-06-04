@@ -44,16 +44,19 @@ class SearchFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_search, container, false)
 
 
+
+
         recyclerView = view.findViewById(R.id.searchList)
         recyclerView!!.setHasFixedSize(true)
         recyclerView!!.layoutManager = LinearLayoutManager(context)
-        searchEditText = view.findViewById(R.id.searchUsersSet)
+        searchEditText = view.findViewById(R.id.searchUserSet)
 
         mUsers = ArrayList()
         retrieveAllUsers()
 
 
-        searchUsersSet.addTextChangedListener(object : TextWatcher{
+        searchEditText!!.addTextChangedListener(object : TextWatcher
+        {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
             }
