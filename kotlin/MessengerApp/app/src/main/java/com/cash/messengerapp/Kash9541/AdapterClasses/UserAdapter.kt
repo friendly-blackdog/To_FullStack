@@ -43,7 +43,7 @@ class UserAdapter(
         Picasso.get().load(user.getProfile()).placeholder(R.drawable.profile).into(holder.profileImageView)
     }
 
-
+// ㅇㅣㄹ하지 않아도 돈이 들어오는 수익구조
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
         var userNameTxt: TextView
