@@ -181,6 +181,7 @@ class MessageChatActivity : AppCompatActivity()
                     ref.child("Chats").child(messageId!!).setValue(messageHashMap)
 
                     progressBar.dismiss()
+                    // FCM notification
                 }
             }
         }
