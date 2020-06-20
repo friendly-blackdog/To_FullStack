@@ -1,6 +1,5 @@
 package com.cash.messengerapp.Kash9541
 
-import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
@@ -9,8 +8,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cash.messengerapp.Kash9541.AdapterClasses.ChatsAdapter
-import com.cash.messengerapp.Kash9541.ModelClasses.Chat
 import com.cash.messengerapp.Kash9541.ModelClasses.Users
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
