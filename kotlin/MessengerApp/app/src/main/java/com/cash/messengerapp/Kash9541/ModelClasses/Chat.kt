@@ -10,6 +10,7 @@ class Chat
     private var messageId: String = ""
 
     constructor()
+
     constructor(
         sender: String,
         message: String,

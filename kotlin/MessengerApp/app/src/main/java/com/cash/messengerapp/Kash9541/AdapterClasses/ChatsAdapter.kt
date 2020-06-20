@@ -74,10 +74,12 @@ class ChatsAdapter(
             else if (!chat.getSender().equals(firebaseUser!!.uid))
             {
                 holder.show_text_message!!.visibility = View.GONE
-                holder.right_image_view!!.visibility = View.GONE
+                holder.left_image_view!!.visibility = View.GONE
                 Picasso.get().load(chat.getUrl()).into(holder.left_image_view)
             }
         }
+
+
         //text Messages
         else
         {
