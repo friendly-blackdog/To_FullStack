@@ -71,7 +71,7 @@ class ChatsFragment : Fragment()
 
                     (usersChatList as ArrayList).add(chatlist!!)
                 }
-                retrieveChatLists()
+                retrieveChatList()
             }
 
             override fun onCancelled(p0: DatabaseError)
@@ -90,7 +90,7 @@ class ChatsFragment : Fragment()
 
 
 
-    private fun retrieveChatLists()
+    private fun retrieveChatList()
     {
         mUsers = ArrayList()
 
