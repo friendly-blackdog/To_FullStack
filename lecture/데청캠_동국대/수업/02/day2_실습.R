@@ -46,11 +46,61 @@ avg <- mean(score)
 
 
 
-english <- c(90, 80, 60, 70) # 영어 점수 변수 생성 english
-## [1] 90 80 60 70
-math <- c(50, 60, 100, 20) # 수학 점수 변수 생성 math
-##[1] 50 60100 20
-# english, math로 데이터 프레임 생성해서 df_midterm에 할당 df_midterm <- data.frame(english, math)
+english <- c(90, 80, 60, 70) # 영어 점수 변수 생성 
+english
+math <- c(50, 60, 100, 20) # 수학 점수 변수 생성 
+math
+
+# english, math로 데이터 프레임 생성해서 df_midterm에 할당 
+df_midterm <- data.frame(english, math)
 df_midterm
-## english math
-##1 9050 ##2 8060 ##3 60 100 ##4 7020
+
+
+
+
+class <- c(1,1,2,2)
+class
+
+df_midterm <- data.frame(english, math, class)
+df_midterm
+mean(df_midterm$english) # df_midterm의 english로 평균 산출
+mean(df_midterm$math) # df_midterm의 math로 평균 산술
+
+
+
+df_midterm <- data.frame(english = c(90, 80, 60, 70), math = c(50,60,100,20), class=c(1,1,2,2))
+df_midterm
+
+
+
+##실습-------------------
+product <- data.frame(fruit = c('apple', 'straw', 'waterme'), price = c(1800, 1500, 3000), sale=c(24, 38,13))
+product
+mean(product$price)
+mean(product$sale)
+
+
+
+
+
+
+
+
+# readxl 패키지 설치 
+install.packages("readxl")
+Yes
+# readxl 패키지 로드
+library(readxl)
+
+
+
+df_exam <- read_excel("excel_exam.xlsx")
+df_exam
+
+
+mean(df_exam$english)
+mean(df_exam$science)
+
+
+df_exam_novar <- read_excel("excel_exam_novar.xlsx", col_names = F)
+df_exam_novar

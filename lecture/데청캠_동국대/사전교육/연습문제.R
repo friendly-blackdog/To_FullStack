@@ -145,7 +145,7 @@ v1[condi]
 city <- c("Seoul","Tokyo","Washington") 
 rank <- c(1,3,2) 
 city.info <- data.frame(city, rank)
-
+city.info
 
 
 R
@@ -168,7 +168,7 @@ iris[,c("Sepal.Length","Species")]  #Sepal.Length와 Species의 컬럼 보기
 iris[1:50,]                # 1~50행의 모든 컬럼 보기
 iris[1:50,c(1,3)]          # 1~50행, 1번, 3번 컬럼 보기
 
-
+ㄹ
 
 
 dim(iris)    # 행과 열의 수 보이기   
