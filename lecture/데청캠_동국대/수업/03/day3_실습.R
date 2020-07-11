@@ -152,3 +152,18 @@ mpg_honda <- mpg %>% filter(manufacturer == 'honda')
 
 mpg_group <- mpg %>% filter(manufacturer %in% c("chevrolet", "ford", "honda"))
 mean(mpg_group$hwy)
+
+
+exam
+library(readxl)
+library(dplyr)
+exam <- read.csv('csv_exam.csv')
+exam
+exam %>% select(class, math, english)
+exam %>% 
+  filter(class == 1) %>% 
+  select(english)
+
+
+
+mpg <- as.data.frame(ggplot2::mpg)
